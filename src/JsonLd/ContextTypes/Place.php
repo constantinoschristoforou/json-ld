@@ -12,5 +12,6 @@ class Place extends AbstractContext
     protected $structure = [
         'name' => null,
         'address' => PostalAddress::class,
+        'sameAs'=>null
     ];
 }

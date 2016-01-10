@@ -14,5 +14,6 @@ class PostalAddress extends AbstractContext
         'addressLocality' => '',
         'addressRegion' => '',
         'postalCode' => '',
+        'addressCountry' => '',
     ];
 }
