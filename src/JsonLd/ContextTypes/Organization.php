@@ -11,6 +11,7 @@ class Organization extends AbstractContext
      */
     protected $structure = [
         'name'         => null,
+        'url'          => null,
         'address'      => PostalAddress::class,
         'logo'         => ImageObject::class,
         'contactPoint' => ContactPoint::class
