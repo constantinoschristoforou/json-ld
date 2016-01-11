@@ -111,6 +111,9 @@ class Context
             case 'search_box':
                 return new ContextTypes\SearchBox($data);
                 break;
+            case 'website':
+                return new ContextTypes\WebSite($data);
+                break;
             default:
                 throw new InvalidArgumentException(sprintf('Undefined context type: "%s"', $name));
         }
