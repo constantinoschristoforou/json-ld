@@ -10,8 +10,9 @@ class Organization extends AbstractContext
      * @var array
      */
     protected $structure = [
-        'name' => null,
-        'address' => PostalAddress::class,
-        'logo' => ImageObject::class,
+        'name'         => null,
+        'address'      => PostalAddress::class,
+        'logo'         => ImageObject::class,
+        'contactPoint' => ContactPoint::class
     ];
 }
