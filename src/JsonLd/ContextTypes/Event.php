@@ -10,12 +10,12 @@ class Event extends AbstractContext
      * @var array
      */
     protected $structure = [
-        'name' => null,
+        'name'      => null,
         'startDate' => null,
-        'endDate' => null,
-        'url' => null,
-        'offers' => [],
-        'location' => Place::class,
+        'endDate'   => null,
+        'url'       => null,
+        'offers'    => [],
+        'location'  => Place::class,
     ];
 
     /**
@@ -24,18 +24,25 @@ class Event extends AbstractContext
      * @param  mixed $values
      * @return array
      */
-    protected function setOffersAttribute($values)
+    protected function setOffersAttribute( $values )
     {
-        if (is_array($values)) {
-            foreach($values as $key => $value) {
+        if ( is_array($values) ) {
+            foreach ( $values as $key => $value ) {
                 $values[$key] = $this->mapProperty([
-                    'name' => '',
+                    'name'  => '',
                     'price' => '',
-                    'url' => '',
+                    'url'   => '',
                 ], $value);
             }
         }
 
         return $values;
+    }
+
+
+    protected function setTypeAttribute($type)
+    {
+        // TODO: Add type validation
+        return $type;
     }
 }

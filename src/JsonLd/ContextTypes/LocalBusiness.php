@@ -10,11 +10,18 @@ class LocalBusiness extends AbstractContext
      * @var array
      */
     protected $structure = [
-        'name' => null,
-        'description' => null,
-        'telephone' => null,
+        'name'         => null,
+        'url'          => null,
+        'description'  => null,
+        'telephone'    => null,
         'openingHours' => null,
-        'address' => PostalAddress::class,
-        'geo' => GeoCoordinates::class,
+        'address'      => PostalAddress::class,
+        'geo'          => GeoCoordinates::class,
     ];
+
+    protected function setTypeAttribute( $type )
+    {
+        // TODO: Add type validation
+        return $type;
+    }
 }
