@@ -114,6 +114,9 @@ class Context
             case 'website':
                 return new ContextTypes\WebSite($data);
                 break;
+            case 'local_business':
+                return new ContextTypes\LocalBusiness($data);
+                break;
             default:
                 throw new InvalidArgumentException(sprintf('Undefined context type: "%s"', $name));
         }
